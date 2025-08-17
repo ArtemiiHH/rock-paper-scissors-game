@@ -6,6 +6,9 @@
 // Check the result of the two picks
 // Claim the winner
 
+let humanScore = 0;
+let computerScore = 0;
+
 const getHumanChoice = () => {
   let input = parseInt(
     prompt("Enter a number between 1 and 3. \n1 = Rock \n2 = Paper \n3 = Scissors:")
