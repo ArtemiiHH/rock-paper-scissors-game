@@ -8,6 +8,12 @@
 
 const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3 + 1);
-  console.log(randomNum);
+  if (randomNum === 1) {
+    console.log('Rock');
+  } else if (randomNum === 2) {
+    console.log('Paper');
+  } else {
+    console.log('Scissors');
+  }
 };
 getComputerChoice();
