@@ -7,10 +7,8 @@
 // Claim the winner
 
 const getHumanChoice = () => {
-  const input = parseInt(
-    prompt(
-      "Please pick a number between 1-3. 1 is Rock, 2 is Paper, 3 is Scissors:"
-    )
+  let userPick = parseInt(
+    prompt("Pick a number between 1-3. 1 is Rock, 2 is Paper, 3 is Scissors:")
   );
 };
 getHumanChoice();
@@ -21,7 +19,7 @@ const getComputerChoice = () => {
     console.log("Rock");
   } else if (randomNum === 2) {
     console.log("Paper");
-  } else {
+  } else if (randomNum === 3) {
     console.log("Scissors");
   }
 };
