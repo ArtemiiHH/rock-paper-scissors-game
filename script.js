@@ -10,19 +10,19 @@ let humanScore = 0;
 let computerScore = 0;
 
 const getHumanChoice = () => {
-  let input = parseInt(
-    prompt("Enter a number between 1 and 3. \n1 = Rock \n2 = Paper \n3 = Scissors:")
-  );
+  let input = prompt("Pick and enter: \n'Rock' \n'Paper' \n'Scissors'");
 
-  if (input === 1) {
+  input = input.toLowerCase();
+
+  if (input === 'rock') {
     console.log("Rock");
-  } else if (input === 2) {
+  } else if (input === 'paper') {
     console.log("Paper");
-  } else if (input === 3) {
+  } else if (input === 'scissors') {
     console.log("Scissors");
   } else {
-    alert("Enter a number between 1 and 3!");
-    location.reload();
+    // alert("Enter a number between 1 and 3!");
+    // location.reload();
   }
 };
 getHumanChoice();
