@@ -8,7 +8,7 @@
 
 const getHumanChoice = () => {
   let input = parseInt(
-    prompt("Pick a number between 1 and 3. 1 is Rock, 2 is Paper, 3 is Scissors:")
+    prompt("Enter a number between 1 and 3. \n1 = Rock \n2 = Paper \n3 = Scissors:")
   );
 
   if (input === 1) {
@@ -18,7 +18,7 @@ const getHumanChoice = () => {
   } else if (input === 3) {
     console.log("Scissors");
   } else {
-    alert("Pick a number between 1 and 3!");
+    alert("Enter a number between 1 and 3!");
     location.reload();
   }
 };
