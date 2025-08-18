@@ -19,7 +19,6 @@ const getHumanChoice = () => {
     return 'scissors';
   }
 };
-getHumanChoice();
 
 const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3 + 1);
@@ -31,14 +30,10 @@ const getComputerChoice = () => {
     return 'scissors';
   }
 };
-getComputerChoice();
 
 const playGame = () => {
   let humanScore = 0;
   let computerScore = 0;
-
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerChoice();
 
   const playRound = (humanChoice, computerChoice) => {
 
@@ -58,24 +53,25 @@ const playGame = () => {
       humanScore++;
       console.log(`You: ${humanScore} | Computer: ${computerScore}`);
     } else {
-      console.log(`You lose! ${computerChoice} beats ${humanScore}.`);
+      console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
       computerScore++;
       console.log(`You: ${humanScore} | Computer: ${computerScore}`);
     }
 
   };
 
-  for (let i = 1; i <= 5; i++) {
-    playRound(getHumanChoice(), getComputerChoice());
+  for (let i = 0; i < 5; i++) {
 
-    if (i === 5 && humanScore > computerScore) {
-      console.log(`You won! Final scores: You: ${humanScore} | Computer: ${computerScore}.`);
-    } else if (i === 5 && computerScore > humanScore) {
-      console.log(`You lose! Final scores: You: ${humanScore} | Computer: ${computerScore}.`)
-    } else {
-      console.log(`It's a tie. Final scores: You: ${humanScore} | Computer: ${computerScore}.`);
-    }
-  };
+    playRound(getHumanChoice(), getComputerChoice());
+  }
+
+  if (humanScore > computerScore) {
+    console.log('You won the game!');
+  } else if (computerScore > humanScore) {
+    console.log('Computer wins the game!');
+  } else {
+    console.log('The game is a tie.');
+  }
 
 };
 
