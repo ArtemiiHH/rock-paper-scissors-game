@@ -33,29 +33,39 @@ const getComputerChoice = () => {
 };
 getComputerChoice();
 
-let humanScore = 0;
-let computerScore = 0;
+const playGame = () => {
+  let humanScore = 0;
+  let computerScore = 0;
 
-const playRound = (humanChoice, computerChoice) => {
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
 
-  if (humanChoice === computerChoice) {
-    console.log(`It's a tie! You picked ${humanChoice} and computer picked ${computerChoice}.`);
-  } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-    console.log(`You win! Rock beats scissors.`);
-    humanScore++;
-  } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-    console.log(`You win! Paper beats rock.`);
-    humanScore++;
-  } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-    console.log(`You win! Scissors beat paper.`);
-    humanScore++;
-  } else {
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
-    computerScore++;
-  }
+
+  const playRound = (humanChoice, computerChoice) => {
+
+    if (humanChoice === computerChoice) {
+      console.log(`It's a tie! You picked ${humanChoice} and computer picked ${computerChoice}.`);
+    } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
+      console.log(`You win! Rock beats scissors.`);
+      humanScore++;
+    } else if (humanChoice === 'paper' && computerChoice === 'rock') {
+      console.log(`You win! Paper beats rock.`);
+      humanScore++;
+    } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
+      console.log(`You win! Scissors beat paper.`);
+      humanScore++;
+    } else {
+      console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+      computerScore++;
+    }
+  };
+
+  playRound(humanSelection, computerSelection);
+
+  for (let i = 1; i >= 5; i++) {
+    playRound();
+  };
+
 };
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
+playGame();
