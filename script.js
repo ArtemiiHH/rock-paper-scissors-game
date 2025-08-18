@@ -6,6 +6,7 @@
 // Check the result of the two picks
 // Claim the winner
 
+// Get user's choice
 const getHumanChoice = () => {
   let input = prompt("Pick and enter: \n'Rock' \n'Paper' \n'Scissors'");
 
@@ -20,6 +21,7 @@ const getHumanChoice = () => {
   }
 };
 
+// Let computer make a random choice
 const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3 + 1);
   if (randomNum === 1) {
@@ -31,10 +33,14 @@ const getComputerChoice = () => {
   }
 };
 
+// Play Game function
 const playGame = () => {
+
+  // Score variables
   let humanScore = 0;
   let computerScore = 0;
 
+  // Play Round function
   const playRound = (humanChoice, computerChoice) => {
 
     if (humanChoice === computerChoice) {
@@ -60,11 +66,13 @@ const playGame = () => {
 
   };
 
+  // Loop executes the function 5 times
   for (let i = 0; i < 5; i++) {
 
     playRound(getHumanChoice(), getComputerChoice());
   }
 
+  // Display winner after the loop
   if (humanScore > computerScore) {
     console.log('You won the game!');
   } else if (computerScore > humanScore) {
