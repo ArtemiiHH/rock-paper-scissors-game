@@ -6,23 +6,17 @@
 // Check the result of the two picks
 // Claim the winner
 
-let humanScore = 0;
-let computerScore = 0;
-
 const getHumanChoice = () => {
   let input = prompt("Pick and enter: \n'Rock' \n'Paper' \n'Scissors'");
 
   input = input.toLowerCase();
 
-  if (input === 'rock') {
-    console.log("Rock");
-  } else if (input === 'paper') {
-    console.log("Paper");
-  } else if (input === 'scissors') {
-    console.log("Scissors");
-  } else {
-    // alert("Enter a number between 1 and 3!");
-    // location.reload();
+  if (input === "rock") {
+    return 'Rock';
+  } else if (input === "paper") {
+    return 'Paper';
+  } else if (input === "scissors") {
+    return 'Scissors';
   }
 };
 getHumanChoice();
@@ -30,11 +24,23 @@ getHumanChoice();
 const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3 + 1);
   if (randomNum === 1) {
-    console.log("Rock");
+    return 'Rock';
   } else if (randomNum === 2) {
-    console.log("Paper");
+    return 'Paper';
   } else if (randomNum === 3) {
-    console.log("Scissors");
+    return 'Scissors';
   }
 };
 getComputerChoice();
+
+let humanScore = 0;
+let computerScore = 0;
+
+const playRound = (humanChoice, computerChoice) => {
+  
+};
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
