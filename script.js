@@ -38,16 +38,16 @@ const getComputerChoice = () => {
 const playRound = (humanChoice, computerChoice) => {
 
   if (humanChoice === computerChoice) {
-    result.textContent = `It's a tie! You both picked ${humanChoice}.`;
+    result.textContent = `You both picked ${humanChoice}. Nobody gets a point.`;
   } else if (humanChoice === 'rock' && computerChoice === 'scissors' ||
     humanChoice === 'paper' && computerChoice === 'rock' ||
     humanChoice === 'scissors' && computerChoice === 'paper'
   ) {
-    result.textContent = `You win! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice}!`;
+    result.textContent = `You win! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice}.`;
     humanScore++;
     pScore.textContent = `Player: ${humanScore}`;
   } else {
-    result.textContent = `You lose! ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${humanChoice}!`;
+    result.textContent = `You lose! ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${humanChoice}.`;
     computerScore++;
     cScore.textContent = `Computer: ${computerScore}`;
   }
