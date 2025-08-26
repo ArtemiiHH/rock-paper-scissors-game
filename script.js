@@ -44,10 +44,12 @@ const playRound = (humanChoice, computerChoice) => {
     humanChoice === 'scissors' && computerChoice === 'paper'
   ) {
     result.textContent = `You win! ${humanChoice} beats ${computerChoice}!`;
-    pScore.textContent = `Player: ${humanScore++}`;
+    humanScore++;
+    pScore.textContent = `Player: ${humanScore}`;
   } else {
     result.textContent = `You lose! ${computerChoice} beats ${humanChoice}!`;
-    cScore.textContent = `Computer: ${computerScore++}`;
+    computerScore++;
+    cScore.textContent = `Computer: ${computerScore}`;
   }
 
   // Display winner after the loop
