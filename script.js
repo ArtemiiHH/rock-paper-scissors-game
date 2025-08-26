@@ -10,6 +10,7 @@
 const rockBtn = document.querySelector('.rock-btn');
 const paperBtn = document.querySelector('.paper-btn');
 const scissorsBtn = document.querySelector('.scissors-btn');
+const result = document.querySelector('.result-text');
 
 // Get user's choice
 const getHumanChoice = () => {
