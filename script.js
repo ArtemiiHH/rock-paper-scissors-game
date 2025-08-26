@@ -52,13 +52,11 @@ const playRound = (humanChoice, computerChoice) => {
     cScore.textContent = `Computer: ${computerScore}`;
   }
 
-  // Display winner after the loop
-  if (humanScore > computerScore) {
+  // Display winner after 5 points
+  if (humanScore === 5) {
     result.textContent = `You won the game!`;
-  } else if (computerScore > humanScore) {
+  } else if (computerScore === 5) {
     result.textContent = `Computer wins the game!`;
-  } else {
-    result.textContent = `The game is a tie.`;
   }
 }
 
