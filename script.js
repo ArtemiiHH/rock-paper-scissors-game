@@ -43,11 +43,11 @@ const playRound = (humanChoice, computerChoice) => {
     humanChoice === 'paper' && computerChoice === 'rock' ||
     humanChoice === 'scissors' && computerChoice === 'paper'
   ) {
-    result.textContent = `You win! ${humanChoice} beats ${computerChoice}!`;
+    result.textContent = `You win! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice}!`;
     humanScore++;
     pScore.textContent = `Player: ${humanScore}`;
   } else {
-    result.textContent = `You lose! ${computerChoice} beats ${humanChoice}!`;
+    result.textContent = `You lose! ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${humanChoice}!`;
     computerScore++;
     cScore.textContent = `Computer: ${computerScore}`;
   }
