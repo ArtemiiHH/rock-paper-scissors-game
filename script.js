@@ -88,4 +88,17 @@ const playGame = () => {
 
 };
 
+// Buttons actions
+rockBtn.addEventListener('click', () => {
+  playRound();
+});
+
+paperBtn.addEventListener('click', () => {
+  playRound();
+});
+
+scissorsBtn.addEventListener('click', () => {
+  playRound();
+});
+
 playGame();
