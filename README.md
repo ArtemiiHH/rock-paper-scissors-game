@@ -22,4 +22,8 @@ Tracks scores for player and computer
 
 Announces round outcomes and final winner
 
+<<<<<<< HEAD
 User-friendly prompts
+=======
+User-friendly prompts
+>>>>>>> 4014be6f8cd5b22dceed157ee9c3a8654961c819
