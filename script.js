@@ -6,6 +6,11 @@
 // Check the result of the two picks
 // Claim the winner
 
+// Buttons
+const rockBtn = document.querySelector('.rock-btn');
+const paperBtn = document.querySelector('.paper-btn');
+const scissorsBtn = document.querySelector('.scissors-btn');
+
 // Get user's choice
 const getHumanChoice = () => {
   let input = prompt("Pick and enter: \n'Rock' \n'Paper' \n'Scissors'");
