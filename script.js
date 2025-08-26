@@ -18,6 +18,10 @@ const result = document.querySelector('.result-text');
 const pScore = document.querySelector('.player-score');
 const cScore = document.querySelector('.computer-score');
 
+// Score variables
+let humanScore = 0;
+let computerScore = 0;
+
 // Get computer's choice
 const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3 + 1);
@@ -32,9 +36,6 @@ const getComputerChoice = () => {
 
 // Play Round function
 const playRound = (humanChoice, computerChoice) => {
-  // Score variables
-  let humanScore = 0;
-  let computerScore = 0;
 
   if (humanChoice === computerChoice) {
     result.textContent = `It's a tie! You both picked ${humanChoice}.`;
@@ -58,8 +59,6 @@ const playRound = (humanChoice, computerChoice) => {
     result.textContent = `The game is a tie.`;
   }
 }
-
-};
 
 // Buttons actions
 rockBtn.addEventListener('click', () => {
