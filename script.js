@@ -52,12 +52,26 @@ const playRound = (humanChoice, computerChoice) => {
     cScore.textContent = `Computer: ${computerScore}`;
   }
 
-  // Display winner after 5 points
+  // Display winner and disable buttons after 5 points
   if (humanScore === 5) {
     result.textContent = `You won the game!`;
+    disableBtns();
   } else if (computerScore === 5) {
     result.textContent = `Computer wins the game!`;
+    disableBtns();
   }
+}
+
+// Disable buttons function
+const disableBtns = () => {
+  rockBtn.disabled = true;
+  rockBtn.style.opacity = 0.3;
+
+  paperBtn.disabled = true;
+  paperBtn.style.opacity = 0.3;
+
+  scissorsBtn.disabled = true;
+  scissorsBtn.style.opacity = 0.3;
 }
 
 // Buttons actions
