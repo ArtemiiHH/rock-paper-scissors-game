@@ -14,9 +14,7 @@ const result = document.querySelector('.result-text');
 
 // Get user's choice
 const getHumanChoice = () => {
-  let input = prompt("Pick and enter: \n'Rock' \n'Paper' \n'Scissors'");
 
-  input = input.toLowerCase();
 
   if (input === "rock") {
     return 'rock';
@@ -27,7 +25,7 @@ const getHumanChoice = () => {
   }
 };
 
-// Let computer make a random choice
+// Get computer's choice
 const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3 + 1);
   if (randomNum === 1) {
@@ -75,11 +73,11 @@ const playGame = () => {
 
   // Display winner after the loop
   if (humanScore > computerScore) {
-    console.log('You won the game!');
+    result.textContent = `You won the game!`;
   } else if (computerScore > humanScore) {
-    console.log('Computer wins the game!');
+    result.textContent = `Computer wins the game!`;
   } else {
-    console.log('The game is a tie.');
+    result.textContent = `The game is a tie.`;
   }
 
 };
