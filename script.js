@@ -66,11 +66,11 @@ const playGame = () => {
 
   };
 
-  // Loop executes the function 5 times
-  for (let i = 0; i < 5; i++) {
+  // Loop executes the function 5 times (5 Rounds)
+  // for (let i = 0; i < 5; i++) {
 
-    playRound(getHumanChoice(), getComputerChoice());
-  }
+  //   playRound(getHumanChoice(), getComputerChoice());
+  // }
 
   // Display winner after the loop
   if (humanScore > computerScore) {
