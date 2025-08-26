@@ -57,13 +57,9 @@ const playRound = (humanChoice, computerChoice) => {
   } else {
     result.textContent = `The game is a tie.`;
   }
+}
 
 };
-
-// Loop executes the function 5 times (5 Rounds)
-for (let i = 0; i < 5; i++) {
-  playRound(getComputerChoice());
-}
 
 // Buttons actions
 rockBtn.addEventListener('click', () => {
