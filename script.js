@@ -64,15 +64,11 @@ const playRound = (humanChoice, computerChoice) => {
 
 // Disable buttons function
 const disableBtns = () => {
-  rockBtn.disabled = true;
-  rockBtn.style.opacity = 0.3;
-
-  paperBtn.disabled = true;
-  paperBtn.style.opacity = 0.3;
-
-  scissorsBtn.disabled = true;
-  scissorsBtn.style.opacity = 0.3;
-}
+  [rockBtn, paperBtn, scissorsBtn].forEach(btn => {
+    btn.disabled = true;
+    btn.style.opacity = 0.3;
+  });
+};
 
 // Buttons actions
 rockBtn.addEventListener('click', () => {
