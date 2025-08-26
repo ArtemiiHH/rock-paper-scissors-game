@@ -10,24 +10,13 @@
 const rockBtn = document.querySelector('.rock-btn');
 const paperBtn = document.querySelector('.paper-btn');
 const scissorsBtn = document.querySelector('.scissors-btn');
+
+// Display result
 const result = document.querySelector('.result-text');
 
-// Score variables
-let humanScore = 0;
-let computerScore = 0;
-
-// Get user's choice
-// const getHumanChoice = () => {
-
-
-//   if (input === "rock") {
-//     return 'rock';
-//   } else if (input === "paper") {
-//     return 'paper';
-//   } else if (input === "scissors") {
-//     return 'scissors';
-//   }
-// };
+// Display scores
+const pScore = document.querySelector('.player-score');
+const cScore = document.querySelector('.computer-score');
 
 // Get computer's choice
 const getComputerChoice = () => {
@@ -43,33 +32,21 @@ const getComputerChoice = () => {
 
 // Play Round function
 const playRound = (humanChoice, computerChoice) => {
+  // Score variables
+  let humanScore = 0;
+  let computerScore = 0;
 
   if (humanChoice === computerChoice) {
-    result.textContent = `It's a tie! You picked ${humanChoice} and computer picked ${computerChoice}.`;
-  } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-    result.textContent = `You win! Rock beats scissors.`;
-    result.textContent += humanScore++;
-  } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-    result.textContent = `You win! Paper beats rock.`;
-    humanScore++;
-  } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-    result.textContent = `You win! Scissors beat paper.`;
-    humanScore++;
+    result.textContent = `It's a tie! You both picked ${humanChoice}.`;
+  } else if (humanChoice === 'rock' && computerChoice === 'scissors' ||
+    humanChoice === 'paper' && computerChoice === 'rock' ||
+    humanChoice === 'scissors' && computerChoice === 'paper'
+  ) {
+    result.textContent = `You win! ${humanChoice} beats ${computerChoice}!`;
+    pScore.textContent = `Player: ${humanScore++}`;
   } else {
-    result.textContent = `You lose! ${computerChoice} beats ${humanChoice}.`;
-    computerScore++;
-  }
-
-};
-
-// Play Game function
-const playGame = () => {
-
-
-
-  // Loop executes the function 5 times (5 Rounds)
-  for (let i = 0; i < 5; i++) {
-    playRound(getComputerChoice());
+    result.textContent = `You lose! ${computerChoice} beats ${humanChoice}!`;
+    cScore.textContent = `Computer: ${computerScore++}`;
   }
 
   // Display winner after the loop
@@ -83,6 +60,11 @@ const playGame = () => {
 
 };
 
+// Loop executes the function 5 times (5 Rounds)
+for (let i = 0; i < 5; i++) {
+  playRound(getComputerChoice());
+}
+
 // Buttons actions
 rockBtn.addEventListener('click', () => {
   playRound('rock', getComputerChoice());
@@ -95,5 +77,3 @@ paperBtn.addEventListener('click', () => {
 scissorsBtn.addEventListener('click', () => {
   playRound('scissors', getComputerChoice());
 });
-
-playGame();
