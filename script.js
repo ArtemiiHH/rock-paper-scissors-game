@@ -52,16 +52,16 @@ const playGame = () => {
     if (humanChoice === computerChoice) {
       result.textContent = `It's a tie! You picked ${humanChoice} and computer picked ${computerChoice}.`;
     } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-      console.log(`You win! Rock beats scissors.`);
+      result.textContent = `You win! Rock beats scissors.`;
       humanScore++;
     } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-      console.log(`You win! Paper beats rock.`);
+      result.textContent = `You win! Paper beats rock.`;
       humanScore++;
     } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-      console.log(`You win! Scissors beat paper.`);
+      result.textContent = `You win! Scissors beat paper.`;
       humanScore++;
     } else {
-      console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+      result.textContent = `You lose! ${computerChoice} beats ${humanChoice}.`;
       computerScore++;
     }
 
