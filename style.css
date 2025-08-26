@@ -1,3 +1,49 @@
 body {
     background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.scores {
+    display: flex;
+    gap: 50px;
+
+}
+
+.scores h2 {
+    border: solid 3px white;
+    border-radius: 15px;
+    padding: 15px 30px;
+    font-weight: 200;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+}
+
+.btn {
+    padding: 50px;
+    border-radius: 15px;
+    border: solid 3px white;
+    background-color: black;
+}
+
+i {
+    color: white;
+    font-size: 70px;
 }
