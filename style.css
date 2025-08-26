@@ -39,8 +39,15 @@ body {
 .btn {
     padding: 50px;
     border-radius: 15px;
-    border: solid 3px white;
+    border: solid 5px white;
     background-color: black;
+}
+
+.btn:hover {
+    padding: 50px;
+    border-radius: 15px;
+    border: solid 5px white;
+    background-color: rgb(161, 161, 20);
 }
 
 i {
